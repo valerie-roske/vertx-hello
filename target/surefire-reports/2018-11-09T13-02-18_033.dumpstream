@@ -1,0 +1,15 @@
+# Created on 2018-11-09T13:02:18.034
+WARNING: An illegal reflective access operation has occurred
+
+# Created on 2018-11-09T13:02:18.035
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/valerieroske/.m2/repository/io/netty/netty-common/4.1.19.Final/netty-common-4.1.19.Final.jar) to constructor java.nio.DirectByteBuffer(long,int)
+
+# Created on 2018-11-09T13:02:18.035
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+
+# Created on 2018-11-09T13:02:18.035
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+
+# Created on 2018-11-09T13:02:18.035
+WARNING: All illegal access operations will be denied in a future release
+

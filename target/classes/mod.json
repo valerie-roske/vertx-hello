@@ -1,0 +1,4 @@
+{
+  "main": "io.vertx.starter.MainVerticle",
+  "auto-redeploy": true
+}

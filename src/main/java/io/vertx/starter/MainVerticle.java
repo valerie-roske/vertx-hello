@@ -6,27 +6,30 @@ import io.vertx.core.http.HttpServerResponse;
 import io.vertx.core.json.Json;
 import io.vertx.ext.web.Router;
 import io.vertx.ext.web.RoutingContext;
+import io.vertx.ext.web.handler.StaticHandler;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class MainVerticle extends AbstractVerticle {
 
-  private Map<Integer, Whisky> products = new LinkedHashMap<>();
+  private Map<Integer, Airplane> airplanes = new LinkedHashMap<>();
 
   @Override
   public void start(Future<Void> future) throws Exception {
     createSomeData();
 
     Router router = Router.router(vertx);
+
+    router.route().handler(StaticHandler.create());
+
+    router.get("/airplanes").handler(this::getAllAirplanes);
+
     router.route("/").handler(routingContext -> {
       HttpServerResponse response = routingContext.response();
-      response
-        .putHeader("content-type", "text/html")
-        .end("<h1>Hello from my first Vert.x 3 application</h1>");
-    });
 
-    router.get("/whiskies").handler(this::getAll);
+      response.sendFile("webroot/index.html");
+    });
 
     vertx
       .createHttpServer()
@@ -45,17 +48,16 @@ public class MainVerticle extends AbstractVerticle {
   }
 
   private void createSomeData() {
-    Whisky bowmore = new Whisky("Bowmore 15 Years Laimrig", "Scotland, Islay");
-    products.put(bowmore.getId(), bowmore);
-    Whisky talisker = new Whisky("Talisker 57° North", "Scotland, Island");
-    products.put(talisker.getId(), talisker);
+    Airplane airplane1 = new Airplane("N4567SW", "Dallas, Texas");
+    airplanes.put(airplane1.getId(), airplane1);
+    Airplane airplane2 = new Airplane("N567AC", "San Francisco, California");
+    airplanes.put(airplane2.getId(), airplane2);
   }
 
-  private void getAll(RoutingContext routingContext) {
-    System.out.println("get all whiskies");
+  private void getAllAirplanes(RoutingContext routingContext) {
     routingContext.response()
       .putHeader("content-type", "application/json; charset=utf-8")
-      .end(Json.encodePrettily(products.values()));
+      .end(Json.encodePrettily(airplanes.values()));
   }
 
 }

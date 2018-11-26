@@ -1,0 +1,7 @@
+.idea/
+.mvn/
+.vertx/
+lib/
+target/
+web-src/build/
+web-src/node_modules/

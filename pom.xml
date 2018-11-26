@@ -123,6 +123,9 @@
             <version>${junit-jupiter.version}</version>
           </dependency>
         </dependencies>
+        <configuration>
+          <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>

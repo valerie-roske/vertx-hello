@@ -1,7 +1,0 @@
--------------------------------------------------------------------------------
-Test set: io.vertx.starter.TestMainVerticle
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 10.766 s <<< FAILURE! - in io.vertx.starter.TestMainVerticle
-start_http_server{Vertx, VertxTestContext}  Time elapsed: 10.761 s  <<< ERROR!
-java.util.concurrent.TimeoutException: The test execution timed out
-

@@ -39,7 +39,7 @@ class App extends Component {
           {airplanes}
 
           <button className="App-button" onClick={this.getAirplanes}>
-            Find the airplanes
+            It's a bird! It's a plane!
           </button>
         </header>
       </div>

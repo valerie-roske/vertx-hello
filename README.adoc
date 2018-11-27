@@ -1,3 +1,5 @@
+This is a React + Vertx application with a Docker multi-stage build
+
 = Starter
 
 image:https://img.shields.io/badge/vert.x-3.5.4-purple.svg[link="https://vertx.io"]

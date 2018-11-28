@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import AirplaneButton from './AirplaneButton';
 
 class App extends Component {
   constructor() {
@@ -38,9 +39,7 @@ class App extends Component {
           <h1>Airplanes</h1>
           {airplanes}
 
-          <button className="App-button" onClick={this.getAirplanes}>
-            It's a bird! It's a plane!
-          </button>
+          <AirplaneButton onClick={this.getAirplanes} />
         </header>
       </div>
     );

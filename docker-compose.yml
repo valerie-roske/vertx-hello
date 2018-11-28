@@ -2,6 +2,7 @@ version: '3'
 
 services:
   vertx-hello:
+    image: vertex-hello
     build:
       context: .
       dockerfile: Dockerfile
